@@ -1,0 +1,83 @@
+<html>
+<head>
+  <meta name="description" content="J Component">
+  <meta name="keywords" content="HTML,CSS,JavaScript">
+  <meta name="author" content="Shreya Gupta & Roshni">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style_main.css">
+</head>
+<body background="1.jpg" onLoad="typee();">
+	<div class="top_nav">
+	<a href="main.html">Home</a>
+	<a href="about.html">About News@U</a>
+	<div class="register">
+		<a href="faq.html">FAQs</a>
+		<a href="login.html" align="right">Login/Sign Up</a></div>
+</div>
+	<img src="News@U (1).png" class="logo">	
+	<div class="main_body">
+			<input type="submit" name="search_btn" class="btn" value="Search">
+			<input type="text" name="search" class="search_box" placeholder="Search newspapers...">
+			<h2>Toll Free Number : <font color="#FD8008">1890-000-1300</font></h2><br><br>
+			<div class="div_1">
+				<div class="tag">
+				<p id="demo"></p>
+				</div>
+			</div>
+				<marquee loop="infinte" width="100%" bgcolor="#EEEEEE" behavior="alternate" >
+				<img src="l1.png">
+				<img src="l2.png">
+				<img src="l3.png">
+				<img src="l4.png">
+				<img src="l5.png">
+				<img src="l6.png">
+				<img src="l7.png">
+				<img src="l8.png">
+				<img src="l9.png">
+				<img src="l10.png">
+				<img src="l11.png">
+				</marquee>
+			<div class="steps">
+				<center>
+				<table border="0" cellpadding="15px" cellspacing="0px" width="90%">
+						<tr>
+						<td><img src="steps(1).png"></td>
+						<td><img src="steps(2).png"></td>
+						<td><img src="steps(3).png"></td>
+						<td><img src="steps(4).png"></td>
+					    </tr>
+					<tr>
+						<th>REGISTER</th>
+						<th>SEARCH</th>
+						<th>SELECT</th>
+						<th>SUBSCRIBE</th>
+					</tr>
+					<tr>
+						<td>Register yourself on the <br>portal</td>
+						<td>Search for your favourite <br>newspapers</td>
+						<td>Select the vendors available <br>in your area</td>
+						<td>Subscribe for the newspaper by<br> choosing an appropiate plan</td>
+					</tr>
+				</table>
+			</center>
+			</div>
+			</div>
+			<div class="contact">
+				<a href="contact.html">Can't find what you're looking for?<span> Contact us</span> and one of our customer care agents will assist you.
+				</a>
+			</div>
+	
+	<script>
+	var j=0;
+	var text='So that you stay lazy forever, we have started news@u.com'
+	var speed=110;
+	function typee(){
+	if(j<text.length){
+	document.getElementById("demo").innerHTML += text.charAt(j);
+	j++;
+	setTimeout(typee,speed);
+	}
+	}
+	</script>
+</body>
+</html>

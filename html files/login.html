@@ -1,0 +1,61 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style_main.css">
+</head>
+<body background="1.jpg">
+	<div class="top_nav">
+	<a href="main.html">Home</a>
+	<a href="about.html">About News@U</a>
+	<div class="register">
+		<a href="faq.html">FAQs</a>
+		<a href="login.html" align="right">Login/Sign Up</a></div>
+</div>
+	<img src="News@U (1).png" class="logo">	
+	<div class="main_body">
+			<input type="submit" name="search_btn" class="btn" value="Search">
+			<input type="text" name="search" class="search_box" placeholder="Search newspapers...">
+			<h2>Toll Free Number : <font color="#FD8008">1890-000-1300</font></h2><br><br>
+	<center>
+	<div class="box">
+	<h3>Login to Existing Account</h3>
+		If you have an account with us, please log in.<br><br><br>
+	<div class="login">
+    <form action="login_connect.php" method="post">
+    <b>Username :</b>
+    <input type="text" placeholder="Enter Username" name="username" required><br>
+
+    <b>Password :&nbsp;&nbsp;</b>
+    <input type="password" placeholder="Enter Password" name="password" required><br><br>
+    <b>Login as :&nbsp;&nbsp;</b><select id="position" name="type" style="width: 240px; height: 30px; border-radius: 5px;">
+              <option value="Customer">Customer</option>
+              <option value="Vendor">Newspaper Vendor</option>
+              <option value="Administrator">Admin</option>
+            </select></<br>
+	</div>
+  <br><br>
+  <div class="container">
+    <input type="submit" value="Login" class="btn1" style="width: 25%">
+    <a href="#">Forgot password?</a>
+  </div>
+</div>
+	</form>
+	<br><br><br>
+	<i style="font-size: 42px;">------------------- OR -----------------</i>
+	<div class="box">
+	<h3>Register as a new User</h3>
+	<div class="reg" align="center">
+	<form action="options.php">
+		<input type="radio" value="customer" name="register" checked>I am a new customer to subscribe for newspaper delivery<br>
+		<input type="radio" value="company" name="register">I have a newspaper company, and want to supply newspapers to customers <br><br>
+		<input type="submit" value="Sign Up" class="btn1" style="width: 45%; margin-left: 150px;">
+	</form>
+	</div>
+	</div><br><br>
+</center>
+</div>
+<div class="contact">
+				<a href="contact.html">Can't find what you're looking for? <span>Contact us</span> and one of our customer care agents will assist you.
+				</a>
+			</div>
+</body>
+</html>

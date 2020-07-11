@@ -1,0 +1,84 @@
+.top_nav span{
+	color: #FD8008;
+	text-decoration: none;
+	cursor: pointer;
+}
+.top_nav b{
+  float: right;
+}
+.sidenav{
+	height: 600px;
+	color: black;
+	font-size: 24px;
+	margin-top: 0px;
+  z-index: 1000;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  box-shadow: 5px 10px 8px #000;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+main{
+  width: 100%;
+  margin-right: 0px;
+}
+.vendor_intro{
+  font-size: 72px;
+  font-style: bold;
+  background-color: rgba(0,0,0,0.7);
+  padding: 150px;
+  width: 70%;
+  height: 50%;
+}
+.vendor_intro span{
+  color: #FD8008;
+  text-decoration: none;
+  font-size: 72px;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  margin-left: 50px;
+}
+.sidenav h2{
+  color: #FD8008; 
+}
+.sidenav dd{
+  font-size: 16px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.sidenav dt{
+	list-style-type: none;
+	color: #FD8008;
+  padding: 20px 40px;
+  font-size: 20px;
+}
+footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}

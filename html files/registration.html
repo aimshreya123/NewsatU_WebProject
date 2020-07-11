@@ -1,0 +1,171 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style_main.css">
+	<meta name="description" content="J Component">
+  <meta name="keywords" content="HTML,CSS">
+  <meta name="author" content="Shreya Gupta & Roshni">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+    	function formvalid() 
+	     {
+	    	var fname= document.getElementById("firstname").value;
+	    	var lname= document.getElementById("lastname").value;
+	    	var eid= document.getElementById("mail").value;
+	    	var pwd= document.getElementById("psw").value;
+	    	var cit= document.getElementById("city").value;
+	    	var stt= document.getElementById("state").value;
+	    	var pos= document.getElementById("postal").value;
+	    	var phno= document.getElementById("phone").value;
+	    	var alno= document.getElementById("alternate").value;
+	    	var subs= document.getElementById("sub").value;
+
+	    	if(fname!=fname.match(/[A-Za-z]{1,20}/i))
+	    	{
+	    		document.getElementById('spanfname').innerHTML="Alphabets only";
+	    	}
+	    	else
+	    	{
+	    		document.getElementById('spanfname').innerHTML="";
+	    	}
+	    	if (lname!=lname.match(/[A-Za-z]{1,20}/i))
+	    	{
+	    	    document.getElementById('spanlname').innerHTML="Alphabets only";
+	    	}
+	    	else
+	    	{
+	    		document.getElementById('spanlname').innerHTML="";
+	    	}
+	    	if ( ( gender[0].checked == false ) && ( gender[1].checked == false ) && ( gender[2].checked == false) )
+	    	{
+	    		document.getElementById('gn').innerHTML="Please Select Gender";	
+	    	}
+	    	else
+	    	{
+	    		document.getElementById('gn').innerHTML="";
+	    	}
+	    	if (eid!=eid.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/))
+	    	{
+	    	    document.getElementById('seml').innerHTML="Invalid Email ID";
+	    	}
+	    	else
+	    	{
+	    		document.getElementById('seml').innerHTML="";
+	    	}
+	    	if (pwd!=pwd.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$/))
+	    	{
+	    	    document.getElementById('spsw').innerHTML="8-15 letters, 1 caps 1 digit reguired";
+	    	}
+	    	else
+	    	{
+	    		document.getElementById('spsw').innerHTML="";
+	    	}
+	    	if (cit!=cit.match(/[a-zA-Z]{1,15}/i))
+	    	{
+	    	     document.getElementById('ci').innerHTML="Invalid City";
+	    	}
+	    	else
+	    	{
+	    		document.getElementById('ci').innerHTML="";
+	    	}
+	    	if (stt!=stt.match(/[a-zA-Z]{1,20}/i))
+	    	{
+	    	    document.getElementById('st').innerHTML="Invalid State";
+	    	}
+	    	else
+	    	{
+	    		document.getElementById('st').innerHTML="";
+	    	}
+	    	if (pos!=pos.match(/[0-9]{6,7}/))
+	    	{
+	    	    document.getElementById('spo').innerHTML="Invalid Postal Code";
+	    	}
+	    	else
+	    	{
+	    		document.getElementById('spo').innerHTML="";
+	    	}
+	    	if (phno!=phno.match(/^[1-9]{1}[0-9]{9}$/))
+	    	{
+	    	    document.getElementById('sph').innerHTML="Invalid Phone Number";
+	    	}
+	    	else
+	    	{
+	    		document.getElementById('sph').innerHTML="";
+	    	} 
+	    	if (subs=="Select Subscription") 
+	    	{
+	    		document.getElementById('ss').innerHTML="Please Select Subscription";
+	    	}
+	    	else
+	    	{
+	    		document.getElementById('ss').innerHTML="";
+	     	}   
+	    }
+    </script>
+</head>
+<body background="1.jpg">
+	<div class="top_nav">
+	<a href="main.html">Home</a>
+	<a href="about.html">About News@U</a>
+	<div class="register">
+		<a href="faq.html">FAQs</a>
+		<a href="login.html" align="right">Login/Sign Up</a>
+	</div>
+</div>
+	<img src="News@U (1).png" class="logo">	
+	<div class="main_body">
+			<input type="submit" name="search_btn" class="btn" value="Search">
+			<input type="text" name="search" class="search_box" placeholder="Search newspapers...">
+			<h2>Toll Free Number : <font color="#FD8008">1890-000-1300</font></h2><br><br>
+			<h1 align="center">Register As A Customer</h1>
+	<form action="connectivity.php" method="post">
+	<table border="1" cellspacing="0" cellpadding="30px" align="center">
+		<tr><td>
+    <table width="500px;">
+	<tr><td> 
+	</td></tr>
+	<tr>
+		<td>Full Name<sup>*</sup> </td>
+		<td>
+			<input type="textfield" id="firstname" class="reg_cus" required placeholder="Full Name..." name="fname">
+		</td>
+		<td><span id="spanfname"></span></td>
+		<br>
+	</tr>
+	<tr>
+       <td>Email Id<sup>*</sup></td>
+       <td><input type="email" id="mail" class="reg_cus" required placeholder="Email Address..." name="mail"></td>
+       <td><span id="seml"></span></td>
+	</tr>
+	<tr>
+		<td><label for="user-password">Password:<sup>*</sup></label></td>
+        <td><input type="Password" id="psw" required placeholder="Password..." name="password" style="width: 240px; height: 30px; padding-left: 5px; border-radius: 5px;"></td>
+        <td><span id='spsw'></span></td>
+	</tr>
+	<tr>
+		<td>Phone Number<sup>*</sup></td>
+		<td> <input type="number" id="phone" class="reg_cus" required placeholder="Phone Number" name="pnumber"></td>
+		<td><span id="sph"></span></td>
+	</tr>
+	<tr>
+		<td align="right">
+			<br><br>
+			<input type="submit" name="Sign Up" value="Submit" class="btn1" style="width: 120px;" onclick="formvalid();"><br>
+		</td>
+		<td align="center">
+			<br><br>
+			<input type="Button" name="Clear" value="Reset" class="btn1" style="width: 120px;"><br>
+		</td>
+	</tr>
+</table>
+</td>
+</tr>
+</table>
+</form>
+	</div>
+	<div class="contact">
+				<a href="contact.html">Can't find what you're looking for? <span>Contact us</span> and one of our customer care agents will assist you.
+				</a>
+			</div>
+
+</body>
+</html>

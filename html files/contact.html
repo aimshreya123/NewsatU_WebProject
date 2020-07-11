@@ -1,0 +1,139 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style_main.css">
+	<meta name="description" content="J Component">
+  <meta name="keywords" content="HTML,CSS">
+  <meta name="author" content="Shreya Gupta & Roshni">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript">
+		function formvalid() 
+        {
+        	var fname= document.getElementById("firstname").value;
+	        var lname= document.getElementById("lastname").value;
+	        var eid= document.getElementById("email").value;
+	        var phno= document.getElementById("pnumber").value;
+
+	        if (fname!=fname.match(/[A-Za-z]{1,20}/i))
+	        {
+	        	document.getElementById('spanfname').innerHTML="Alphabets only";
+	        }
+	        else
+	        {
+	        	document.getElementById('spanfname').innerHTML=" ";
+	        }
+	        if (lname!=lname.match(/[a-z]{1,20}/i))
+	        {
+                document.getElementById('spanlname').innerHTML="Alphabets only";
+            }
+            else
+	        {
+	        	document.getElementById('spanlname').innerHTML=" ";
+	        }
+            if (eid!=eid.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/))
+            {
+                document.getElementById('mail').innerHTML="Invalid Email ID";
+            }
+            else
+            {
+            	document.getElementById('mail').innerHTML=" ";
+            }
+            if (phno!=phno.match(/^[1-9]{1}[0-9]{9}$/))
+            {
+                document.getElementById('phone').innerHTML="Invalid Phone Number";
+            }
+            else
+            {
+            	document.getElementById('phone').innerHTML=" ";
+            }
+        }
+</script>
+</head>
+<body background="1.jpg">
+<div class="top_nav">
+	<a href="main.html">Home</a>
+	<a href="about.html">About News@U</a>
+	<div class="register">
+		<a href="faq.html">FAQs</a>
+		<a href="login.html" align="right">Login/Sign Up</a></div>
+</div>
+	<img src="News@U (1).png" class="logo">	
+	<div class="main_body">
+			<input type="submit" name="search_btn" class="btn" value="Search">
+			<input type="text" name="search" class="search_box" placeholder="Search newspapers...">
+			<h2>Toll Free Number : <font color="#FD8008">1890-000-1300</font></h2><br><br><br>
+			<p class="conhead">Contact News@U</p>
+			<hr width="30%" align="left"><br>
+<p class="condes">Use the form below to email our customer care department directly. You can also check our list of frequently asked questions, or call our offices directly for more information.</p>
+ 
+<p class="condes">Magazine and newspaper delivery can be scheduled to office buildings, hotels, businesses and apartments throughout the country. Sign up for regular morning delivery of your favorite publications or request a one-time order of an individual title.</p>
+<table width="500px" align="center">
+	<form action="main.html">
+	<tr><td> 
+	</td></tr>
+	<tr>
+		<td>First Name<sup>*</sup> </td>
+		<td>
+			<input type="textfield" id="firstname" class="reg_cus" required placeholder="First Name...">
+		</td>
+		<td>
+			<span id="spanfname"></span>
+		</td>
+		<br>
+	</tr>
+	<tr>
+    <td>Last Name<sup>*</sup></td>
+    <td>
+    	<input type="textfield" id="lastname" class="reg_cus" required placeholder="Last Name...">
+    </td>
+    <td>
+    	<span id="spanlname"></span>
+    </td>
+	</tr>
+	<tr>
+		<td>Email Address<sup>*</sup></td>
+		<td>
+			<input type="email" class="reg_cus" id="email" required placeholder="Email Address">
+		</td>
+		<td>
+			<span id="mail"></span>
+		</td>
+	</tr>
+	<tr>
+		<td>Phone Number<sup>*</sup></td>
+		<td>
+			<input type="number" class="reg_cus" id="pnumber" required placeholder="Primary Phone Number">
+		</td>
+		<td>
+			<span id="phone"></span>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+			<input type="textfield" class="reg_cus" name="snumber" placeholder="Secondary Phone Number (optional)">
+		</td>
+	</tr>
+	<tr>
+		<td>Comments<sup>*</sup></td>
+		<td>
+			<input type="textfield" class="reg_cus" name="comment" required maxlength="50" placeholder="Share your comments..."><br>
+		</td>
+	</tr>
+	<tr>
+		<td align="right">
+			<br><br>
+			<input type="submit" name="Submit" value="Submit" class="btn1" style="width: 120px;" onclick="formvalid();"><br>
+		</td>
+		<td align="center">
+			<br><br>
+			<input type="Button" name="Clear" value="Reset" class="btn1" style="width: 120px;"><br>
+		</td>
+	</tr>
+	</table>
+</form><br><br>
+	</div>
+<div class="contact">
+	<a href="contact.html">Can't find what you're looking for? <span>Contact us</span> and one of our customer care agents will assist you.</a>
+	</div>
+	</body>
+	</html>
